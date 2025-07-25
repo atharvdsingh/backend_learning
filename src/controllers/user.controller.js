@@ -39,7 +39,6 @@ const registerUser=asyncHandler(async (req,res)=>{
 
     // data comes from form , json and url - json and from come from req.body 
     const   { fullName, userName,email,password} = req.body
-    console.log('email',email);
 
     //now validate the user 
 

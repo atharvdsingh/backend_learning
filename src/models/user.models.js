@@ -52,7 +52,7 @@ const userSchema = new Schema(
 // TODO: check what pre does i think pre does its operation before doing any like like here before saving into database it runs
 userSchema.pre("save", async function (next) {
   
-  //if password changes then password will again bcrypt
+  //we only becrypt when only password changes
   if (!this.isModified("password")) return;
 
   this.password = await bcrypt.hash(this.password, 10);

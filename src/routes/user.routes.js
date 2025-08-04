@@ -35,13 +35,7 @@ router.route("/logout").post(verifyJWT, logout);
 router.route("/current-user").post(verifyJWT, currentUser);
 router.route("/change-password").post(verifyJWT, changeCurrentPassword);
 router.route("/refresh-token").post(refreshAccessToken);
-router
-  .route("/update/avatar")
-  .post(
-    upload.fields([{ name: "avatar", maxCount: 1 }]),
-    verifyJWT,
-    updateAvatar
-  );
+router.route("/update/avatar").post(upload.fields([{ name: "avatar", maxCount: 1 }]),verifyJWT,updateAvatar);
 router
   .route("/update/cover")
   .post(

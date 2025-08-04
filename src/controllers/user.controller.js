@@ -18,7 +18,6 @@ const generateAccessAndRefereshToken=async (userId)=>{
     } catch (error) {
         throw new ApiError(500,'something went wrong while generating access and referesh token ')
     }
-
 }
 
 //register user 
